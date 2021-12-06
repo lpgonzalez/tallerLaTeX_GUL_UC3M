@@ -1,0 +1,85 @@
+\documentclass[10pt, letterpaper, twoside]{book}
+
+% Comentar si se usa el compilador LuaLaTeX. Descomentar si se usa pdfLaTeX
+% \usepackage[utf8]{inputenc}
+
+% Especificar uso de idiomas en el documento, para elementos como índices de contenido
+\usepackage[english, spanish, es-tabla]{babel}
+
+% Definición y uso de colores para elementos
+\usepackage{xcolor}
+
+% Inserción de imágenes raster
+\usepackage{graphicx}
+
+% Inserción de gráficos vectoriales SVG
+\usepackage{svg}
+
+% Para poder incluir \blacksquare
+\usepackage{amssymb}
+
+% Para poder aplicar enlaces dentro del documento
+\usepackage[hidelinks]{hyperref}
+
+% Para tratar adecuadamente los capítulos en el índice de contenido
+\usepackage{titlesec}
+\usepackage{titletoc}
+
+% Para poder utilizar otras fuentes (requiere un compilador como LuaLaTeX)
+\usepackage{fontspec}
+
+% Para trabajar fácilmente con emojis (requiere un compilador como LuaLaTeX)
+\usepackage{emoji}
+
+% Para mostrar adecuadamente la tabla
+\usepackage{multirow}
+
+% Para gestión de la bibliografía
+\usepackage{csquotes}
+\usepackage{biblatex}
+\addbibresource{bibliografía.bib} % fichero con la bibliografía
+
+% Para gestión de acrónimos y glosario
+\usepackage[acronym,toc]{glossaries}
+\makeglossaries
+\loadglsentries{glosario}
+
+% Meta-información con entradas de acrónimo y glosario
+\title{Primer documento}
+\author{Lisardo Prieto \thanks{gracias al \gls{GULa} - \gls{UC3Ma}}}
+\date{Diciembre 2021}
+
+% Definición de colores personalizados
+\definecolor{azulUC3M}{RGB}{24, 30, 146}
+\definecolor{amarilloFosforito}{HTML}{FFFF00}
+
+\begin{document}
+
+% Tipo de numeración de página. Números romanos
+\pagenumbering{Roman}
+
+% Título del documento usando la meta-información
+\maketitle
+
+% -----------------------------------------
+% HOLA, ESTO QUE ESCRIBO NO VA A MOSTRARSE
+% ESTO ES OTRO COMENTARIO
+% -----------------------------------------
+
+% Índices de contenido
+\tableofcontents
+\listoffigures
+\listoftables
+
+% Contenido principal, capítulos, secciones y sub-secciones
+\include{capítulos/01 - elementos básicos/01 - elementos básicos}
+\include{capítulos/02 - elementos avanzados/02 - elementos avanzados}
+
+% Acrónimos y glosario de términos
+\printglossary[type=\acronymtype,title=Acrónimos]
+\printglossary[type=main]
+
+% Bibliografía
+\printbibliography
+
+\end{document}

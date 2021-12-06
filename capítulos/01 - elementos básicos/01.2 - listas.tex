@@ -1,0 +1,70 @@
+\section{Listas simples}
+
+Las listas son sencillas. Para crearlas:
+\begin{itemize}
+  \item Las entradas de la lista comienzan con el comando \verb|\item| .
+  \item Este tipo de lista tiene cada entrada empezando con un ``bullet''.
+  \item La longitud de cada entrada es arbitraria.
+  \item Y el número de elementos también lo es.
+\end{itemize}
+
+% -------------------------
+
+\section{Listas enumeradas}
+
+Las listas enumeradas también son sencillas:
+\begin{enumerate}
+  \item Los elementos se enumeran automáticamente.
+  \item Los números  se crean automáticamente en el entorno \texttt{enumerate}.
+  \item Otra entrada
+\end{enumerate}
+
+% -------------------------
+
+\subsection{Sublistas enumeradas}
+
+Ejemplo de sublistas enumeradas:
+\begin{enumerate}
+  \item Primer nivel.
+  \begin{enumerate}
+    \item Segundo nivel.
+    \begin{enumerate}
+      \item Tercer nivel.
+      \item Tercer nivel.
+    \end{enumerate}
+    \item Segundo nivel.
+  \end{enumerate}
+  \item Primer nivel.
+\end{enumerate}
+
+% -------------------------
+
+\section{Más sublistas}
+
+Otro ejemplo de sublistas:
+\begin{itemize}
+  \item Primer nivel.
+  \begin{itemize}
+    \item Segundo nivel.
+    \begin{itemize}
+      \item Tercer nivel.
+      \item Tercer nivel.
+    \end{itemize}
+    \item Segundo nivel.
+  \end{itemize}
+  \item Primer nivel.
+\end{itemize}
+
+% -------------------------
+
+\section{Listas personalizadas}
+
+Tanto las listas con puntos como las enumeradas permiten cambiar el elemento de inicio con \verb|\item[elemento]|
+\begin{enumerate}
+  \item Primer punto
+  \item Segundo punto
+  \item[!] Tercer punto, comenzando con exclamación
+  \item[$\blacksquare$] Ahora empezando con un cuadrado negro
+  \item[NOTA] Esta entrada no tiene ``bullet‘’
+  \item[] Entrada en blanco?
+\end{enumerate}

@@ -1,0 +1,22 @@
+\section{Emojis}
+
+% -------------------------
+
+\subsection{Emojis con el paquete ``emoji''}
+
+Emojis con colores gracias al paquete \texttt{emoji} y LuaLaTeX:
+\emoji{leaves}
+\emoji{rose}
+
+Otro ejemplo, en blanco y negro, usando el código Unicode para carita feliz (U+1F600): {\fontspec{Symbola}\symbol{"1F600}}
+
+% -------------------------
+
+\subsection{Emojis con el tipografía específica (NotoColorEmoji.ttf) y códigos de caracter Unicode}
+
+\newfontfamily\emojifont[Renderer=Harfbuzz]{NotoColorEmoji.ttf}
+
+Emojis utilizando una tipografía específica y código de caracter Unicode (U+1F600):
+% Utilizar \emojifont en un grupo para hacer que su efecto sea local
+{\emojifont \Uchar"1F600 \char"1F600}
+% http://www.unicode.org/emoji/charts/full-emoji-list.html
